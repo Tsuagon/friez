@@ -19,6 +19,8 @@ local torso = char:FindFirstChild("Torso") or char:FindFirstChild("UpperTorso")
 local root = char.HumanoidRootPart
 local humanoid = char.Humanoid
 
+local mouse = player:GetMouse()
+
 ----------------------------------------------------------------------------------------------------
 
 -- General Stuff -- 
@@ -53,7 +55,7 @@ friezashirt.ShirtTemplate = "http://www.roblox.com/asset/?id=6695718834"
 
 local friezapants = Instance.new("Pants")
 friezapants.PantsTemplate = "http://www.roblox.com/asset/?id=6695722311"
-	
+
 friezashirt.Parent = char
 friezapants.Parent = char
 
@@ -190,3 +192,26 @@ local WeldConstraint3 = Instance.new("WeldConstraint")
 WeldConstraint3.Parent = tail
 WeldConstraint3.Part0 = tail
 WeldConstraint3.Part1 = faketorso
+
+-- Sounds --
+
+local dievc = Instance.new("Sound")
+dievc.SoundId = "rbxassetid://9973088182"
+dievc.Volume = 5
+dievc.Parent = torso
+
+local deathorbsfx = Instance.new("Sound")
+deathorbsfx.SoundId = "rbxassetid://8118462092"
+deathorbsfx.Volume = 4
+deathorbsfx.Parent = head
+
+--------------------------------------------------------------------------
+
+-- Moves --
+
+mouse.KeyDown:Connect(function(key)
+	if key == "m" then
+		deathorbsfx:Play()
+		dievc:Play()
+	end
+end)
