@@ -209,9 +209,9 @@ deathorbsfx.Parent = head
 
 -- Moves --
 
-mouse.KeyDown:Connect(function(key)
+--[[mouse.KeyDown:Connect(function(key)
 	if key == "m" then
 		deathorbsfx:Play()
 		dievc:Play()
 	end
-end)
+end)]]--
