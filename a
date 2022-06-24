@@ -51,10 +51,10 @@ for _, v in pairs(char:GetDescendants()) do
 end
 
 local friezashirt = Instance.new("Shirt")
-friezashirt.ShirtTemplate = "http://www.roblox.com/asset/?id=6695718834"
+friezashirt.ShirtTemplate = "http://www.roblox.com/asset/?id=6621609954"
 
 local friezapants = Instance.new("Pants")
-friezapants.PantsTemplate = "http://www.roblox.com/asset/?id=6695722311"
+friezapants.PantsTemplate = "http://www.roblox.com/asset/?id=6621607803"
 
 friezashirt.Parent = char
 friezapants.Parent = char
